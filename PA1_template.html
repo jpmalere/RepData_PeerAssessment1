@@ -303,7 +303,7 @@ stepsData2[which(is.na(stepsData[,1])), 1] &lt;- fillNA[,4]
 mean and median total number of steps per day.</li>
 </ul>
 
-<p><em>The results of the mean and median are approximately the same with and without NAs</em>
+<p><em>The results of the mean and median are approximately the same with and without NAs.</em>
 <em>The histogram presents a greater frequency on the range of 10000 to 15000 in the case without NAs</em></p>
 
 <pre><code class="r">hist(aggregate(steps ~ date, data = stepsData2, sum)[,2],
