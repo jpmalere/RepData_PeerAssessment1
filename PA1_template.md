@@ -83,7 +83,7 @@ dim(subset(stepsData, is.na(steps)))[1]
 ## [1] 2304
 ```
 
-* Replaces the NAs
+* Replaces the NAs (the strategy was to fill the NAs with average values for that interval)
 
 ```r
 fillNA <- merge(stepsData[which(is.na(stepsData[,1])), ], 
@@ -102,7 +102,9 @@ stepsData2[which(is.na(stepsData[,1])), 1] <- fillNA[,4]
 * Plots the histogram of the number of steps and calculates the 
 mean and median total number of steps per day.
 
-*The results are approximately the same with and without NAs*
+*The results of the mean and median are approximately the same with and without NAs*
+*The histogram presents a greater frequency on the range of 10000 to 15000 in the case without NAs*
+
  
 
 ```r
